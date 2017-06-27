@@ -305,4 +305,14 @@ describe('fp-utils', () => {
             assert.equal(actual, 'hello, world');
         });
     });
+
+    describe('range', () => {
+        it('should return array of numbers starting at start with count elements', () => {
+            const length = 15;
+            const start = 13;
+            const actual = fp.range(start, length);
+            assert.equal(actual.length, length);
+            assert.equal(actual[0], start);
+        });
+    });
 });
