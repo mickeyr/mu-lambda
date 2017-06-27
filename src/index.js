@@ -134,7 +134,7 @@ const join = curry((s, arr) => arr.join(s));
 const uniq = (arr) => reduce(
     (res, v) => res.indexOf(v) !== -1 ? res : (res.push(v), res), [], arr);
 
-const range = (start, count) => Array.from(Array(count+start).keys()).splice(start);
+const range = curry((start, count) => Array.from(Array(count+start).keys()).splice(start));
 
 module.exports = {
     all,
